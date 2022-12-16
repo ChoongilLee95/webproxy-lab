@@ -37,8 +37,8 @@ int main(int argc, char **argv) {
     Getnameinfo((SA *)&clientaddr, clientlen, hostname, MAXLINE, port, MAXLINE,
                 0);
     printf("Accepted connection from (%s, %s)\n", hostname, port);
-    //doit(connfd);   // line:netp:tiny:doit
-    echo(connfd);
+    doit(connfd);   // line:netp:tiny:doit
+    //echo(connfd);
     Close(connfd);  // line:netp:tiny:close
   }
 }
